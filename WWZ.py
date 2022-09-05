@@ -1,17 +1,28 @@
+from tkinter import Y
 import pygame 
-import sys 
 
+# start pygame 
 pygame.init()
-(width, height) = (640, 500)
+
+# set demenisions of the screen/ surface
+(width, height) = (900, 600)
 screen = pygame.display.set_mode((width, height))
-background = pygame.image.load("bg1.jpg")
-background = pygame.transform.scale(background, (width,height))
+
+# title of screen 
 pygame.display.set_caption('World War Z')
-screen.fill(background, (0,0))
-pygame.display.flip()
+
+# new surface 
+round1_surface = pygame.image.load("bg1.jpg")
+
+
+
+# keeps game running until user hits "x" 
 running = True
 while running:
-  screen.blit(background, (100,100))
-  for event in pygame.event.get():
-    if event.type == pygame.QUIT:
-      running = False
+  for event in pygame.event.get():  # game runs as lone as its "TRUE"
+    if event.type == pygame.QUIT: 
+      running = False  
+  
+  
+  screen.blit(round1_surface, (0,0))
+  pygame.display.flip()
