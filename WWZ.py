@@ -11,9 +11,9 @@ screen = pygame.display.set_mode((width, height))
 pygame.display.set_caption('World War Z')
 
 # new surface 
-round1_surface = pygame.image.load('bg1.jpg')
-soldier_surface = pygame.image.load('soldier.png')
-zombie1_surface = pygame.image.load('zombie1.png')
+round1_surface = pygame.image.load('bg1.jpg').convert_alpha()
+soldier_surface = pygame.image.load('soldier.png').convert_alpha()
+zombie1_surface = pygame.image.load('zombie1.png').convert_alpha()
 zombie1_x_pos = 900  # the starting postion of the zombie... width is the refrence for postion on screen 
 #zombie2_surface = pygame.image.load('zombie2.png')
 
